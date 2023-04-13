@@ -24,7 +24,7 @@ case "$(uname -m)" in
     'aarch64' | 'armv8')
         arch='arm64'
         ;;
-    *)
+    )
         echo -e "${RED}[x] ARQUITECTURA INCOMPATIBLE !${SCOLOR}"
         exit 1
         ;;
@@ -60,4 +60,4 @@ sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
 [[ -e Plus ]] && rm Plus
-wget raw.githubusercontent.com/LAG13-OFC/PR0-main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+wget https://raw.githubusercontent.com/LAG13-OFC/PR0-main/master/script/${arch}/Plus && chmod 777 Plus && ./Plus
