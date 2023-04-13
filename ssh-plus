@@ -59,5 +59,6 @@ echo 'net.ipv6.conf.all.disable_ipv6 = 1' > /etc/sysctl.d/70-disable-ipv6.conf
 sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
+ echo -e "${RED}[x] entrando al link !${SCOLOR}"
 [[ -e Plus ]] && rm Plus
 wget raw.githubusercontent.com/LAG13-OFC/PR0-main/script/arm64/Plus && chmod 777 Plus && ./Plus

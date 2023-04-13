@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+echo -e "${RED}[x] link !${SCOLOR}"
 apt-get install lolcat -y &>/dev/null
 apt-get install figlet -y &>/dev/null
 apt-get install curl -y &>/dev/null
