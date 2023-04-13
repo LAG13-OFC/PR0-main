@@ -1,9 +1,9 @@
-# SCOTT PRO ⚡
+# LAG13 PRO ⚡
 
-# @SCOTTSSH
+# @LAG13_OFC
 
-*PROJETO EM BETA🍷🗿
+*VERSION ESPAÑOL
 ```
-apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/ScottBrabo/PR0/main/ssh-plus)
+apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/LAG13-OFC/PR0-main/master/ssh-plus)
 
 ```
