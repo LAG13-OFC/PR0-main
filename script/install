@@ -31,22 +31,22 @@ case "$(uname -m)" in
 esac
 
 # - Verifica OS Compativel
-if grep -qs "ubuntu" /etc/os-release; then
-	os_version=$(grep 'VERSION_ID' /etc/os-release | cut -d '"' -f 2 | tr -d '.')
-    [[ "$os_version" -lt 1804 ]] && {
-        echo -e "${RED}[x] VERSION DE UBUNTU INCOMPATIBLE !\n${YELLOW}[!] REQUIERE UBUNTU 18.04 OU SUPERIOR !${SCOLOR}"
-        exit 1
-    }
-elif [[ -e /etc/debian_version ]]; then
-	os_version=$(grep -oE '[0-9]+' /etc/debian_version | head -1)
-    [[ "$os_version" -lt 9 ]] && {
-        echo -e "${RED}[x] VERSION DE DEBIAN DEBIAN !\n${YELLOW}[!] REQUIERE DEBIAN 9 OU SUPERIOR !${SCOLOR}"
-        exit 1
-    }
-else
-    echo -e "${RED}[x] OS INCOMPATIVEL !\n${YELLOW}[!] REQUER DISTROS BASE DEBIAN/UBUNTU !${SCOLOR}"
-    exit 1
-fi
+#if grep -qs "ubuntu" /etc/os-release; then
+	#os_version=$(grep 'VERSION_ID' /etc/os-release | cut -d '"' -f 2 | tr -d '.')
+   # [[ "$os_version" -lt 1804 ]] && {
+  #      echo -e "${RED}[x] VERSION DE UBUNTU INCOMPATIBLE !\n${YELLOW}[!] REQUIERE UBUNTU 18.04 OU SUPERIOR !${SCOLOR}"
+   #     exit 1
+  #  }
+#elif [[ -e /etc/debian_version ]]; then
+#	os_version=$(grep -oE '[0-9]+' /etc/debian_version | head -1)
+#    [[ "$os_version" -lt 9 ]] && {
+ #       echo -e "${RED}[x] VERSION DE DEBIAN DEBIAN !\n${YELLOW}[!] REQUIERE DEBIAN 9 OU SUPERIOR !${SCOLOR}"
+#        exit 1
+ #   }
+#else
+#    echo -e "${RED}[x] OS INCOMPATIVEL !\n${YELLOW}[!] REQUER DISTROS BASE DEBIAN/UBUNTU !${SCOLOR}"
+ #   exit 1
+#fi
 
 # - Atualiza Lista/Pacotes/Sistema
 dpkg --configure -a
@@ -60,4 +60,4 @@ sysctl -p -f /etc/sysctl.d/70-disable-ipv6.conf
 
 # - Execulta instalador
 [[ -e Plus ]] && rm Plus
-wget raw.githubusercontent.com/ScottBrabo/PR0/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+wget raw.githubusercontent.com/LAG13-OFC/PR0-main/master/script/${arch}/Plus && chmod 777 Plus && ./Plus
