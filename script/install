@@ -24,7 +24,7 @@ case "$(uname -m)" in
     'aarch64' | 'armv8')
         arch='arm64'
         ;;
-    )
+    *)
         echo -e "${RED}[x] ARQUITECTURA INCOMPATIBLE !${SCOLOR}"
         exit 1
         ;;
