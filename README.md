@@ -4,6 +4,6 @@
 
 *VERSION ESPAÑOL
 ```
-apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/LAG13-OFC/PR0-main/master/ssh-plus)
+apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/LAG13-OFC/PR0-main/ssh-plus)
 
 ```
